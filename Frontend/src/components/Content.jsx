@@ -2,37 +2,23 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import '/src/styles/Content.css';
-
-
+import HomeScreen from '/src/screens/HomeScreen'; // Importa el componente HomeScreen
+import '/src/screens/HomeScreen.css';
 // eslint-disable-next-line react/prop-types
 function Content({ selectedButton }) {
   let content = null;
 
   switch (selectedButton) {
     case "Hoy":
+      content = <HomeScreen />; // Utiliza el componente HomeScreen
+      break;
+    case "Mañana":
       content = (
         <div>
-          <h2>Lista de Nombres Aleatorios:</h2>
-          <ul>
-            <li>nyc</li>
-            <li>Maria</li>
-            <li>Carlos</li>
-            <li>Sofia</li>
-            <li>Luis</li>
-          </ul>
+          <h2>Mañana</h2>
         </div>
       );
       break;
-      case "Mañana":
-        content = (
-          <div>
-            <h2>Mañana</h2>
-
-          </div>
-        );
-        break;
-      
-      
     case "Completado":
       content = (
         <div>
