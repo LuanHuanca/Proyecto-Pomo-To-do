@@ -1,0 +1,19 @@
+/* Footer.css */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 20px;
+  }
+  .footer-button {
+    background-color: #ffffff; /* Fondo de color blanco para el botón */
+    color: #ff0000; /* Texto rojo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

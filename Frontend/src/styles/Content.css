@@ -1,0 +1,50 @@
+/* Content.css */
+.content {
+  flex: 1; /* El contenido ocupará todo el espacio disponible */
+  background-color: #cec5c58e;
+  padding: 370px;
+  width: 970px;
+  margin-top: 5px; /* Asegurar que el content no sobrepase el NavBar */
+  margin-left: 0px; /* Asegurar que el content no sobrepase el Aside */
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* Ajustar el margen izquierdo en pantallas más pequeñas */
+    width: 100%; /* El content ocupará todo el ancho disponible en pantallas más pequeñas */
+    margin-top: 70px; /* Ajustar margen superior en pantallas más pequeñas */
+  }
+}
+/* Content.css */
+.content {
+  /* Estilos generales para el contenido */
+}
+
+.content h2 {
+  /* Estilos para el título */
+  color: #333; /* Ejemplo de color de texto */
+}
+
+.content .panel {
+  /* Estilos para el panel */
+  background-color: #f0f0f0; /* Ejemplo de color de fondo */
+  padding: 10px; /* Ejemplo de relleno */
+  border-radius: 5px; /* Ejemplo de borde redondeado */
+}
+
+.content .numbers {
+  /* Estilos para los números */
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos equitativamente */
+}
+
+.content .numbers span {
+  /* Estilos para cada número */
+  background-color: #ccc; /* Ejemplo de color de fondo */
+  padding: 5px; /* Ejemplo de relleno */
+  border-radius: 3px; /* Ejemplo de borde redondeado */
+}
+
+/* Puedes agregar más estilos según sea necesario */
+
