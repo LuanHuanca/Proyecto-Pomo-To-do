@@ -2,6 +2,8 @@ import React from 'react';
 import Titulo from '../components/Titulo';
 import Especificacion from '../components/Especificacion';
 import "./HomeScreen.css"
+import AnadirTarea from '../components/AnadirTarea';
+import ListaTareas from '../components/ListaTareas';
 
 const HomeScreen = () => {
     return (
@@ -13,6 +15,8 @@ const HomeScreen = () => {
             <Especificacion number={0} descripcion={"Tiempo transcurrido"}/>
             <Especificacion number={0} descripcion={"Tareas completadas"}/>
         </div>
+        <AnadirTarea/>
+        <ListaTareas/>
       </div>
     );
   };
