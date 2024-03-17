@@ -9,7 +9,7 @@ function Content({ selectedButton }) {
   let content = null;
 
   switch (selectedButton) {
-    case "HOY":
+    case "HOy":
       content = <HomeScreen />; // Utiliza el componente HomeScreen
       break;
     case "MAÑANA":
