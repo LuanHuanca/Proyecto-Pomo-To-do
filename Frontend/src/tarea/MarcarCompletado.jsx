@@ -10,8 +10,8 @@ const useMarcarCompletado = () => {
       const tarea = await axios.get(`http://localhost:3000/tareas/${idTarea}`);
       const tareaActualizada = tarea.data;
 
-      // Cambiar el valor de la propiedad 'completado' de 0 a 1
-      tareaActualizada.completado = 1;
+      // Cambiar el valor de la propiedad 'completado' al opuesto del valor actual
+      tareaActualizada.completado = !tareaActualizada.completado;
 
       // Actualizar la tarea en la API utilizando el método PUT
       await axios.put(`http://localhost:3000/tareas/${idTarea}`, tareaActualizada);

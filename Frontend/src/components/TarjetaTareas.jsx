@@ -1,10 +1,10 @@
-import React from 'react';
-import { Icon } from '@iconify/react';
-import './TarjetaTareas.css';
-import useEliminarTarea from '../tarea/EliminarTarea'; // Importa el hook useEliminarTarea
-import useMarcarCompletado from '../tarea/MarcarCompletado';
+import React from "react";
+import { Icon } from "@iconify/react";
+import "./TarjetaTareas.css";
+import useEliminarTarea from "../tarea/EliminarTarea"; // Importa el hook useEliminarTarea
+import useMarcarCompletado from "../tarea/MarcarCompletado";
 
-const TarjetaTareas = ({ tarea}) => {
+const TarjetaTareas = ({ tarea }) => {
   const { eliminarTarea } = useEliminarTarea(); // Llama al hook useEliminarTarea para obtener la función eliminarTarea
   const { marcarCompletado } = useMarcarCompletado(); // Llama al hook useEliminarTarea para obtener la función eliminarTarea
 
@@ -16,22 +16,26 @@ const TarjetaTareas = ({ tarea}) => {
   };
 
   return (
-    <div className='tarjeta-container'>
-      <div className='parte-superior'>
+    <div className="tarjeta-container">
+      <div className="parte-superior">
         <h3>{tarea.titulo}</h3>
         <span>{tarea.prioridad}</span>
       </div>
-      <div className='detalles'>
+      <div className="detalles">
         <p>{tarea.descripcion}</p>
-        <Icon icon='arcticons:pomodoro' width='25' color='red' />
+        <Icon icon="arcticons:pomodoro" width="25" color="red" />
         <span>{tarea.tiempo}</span>
         <span>{tarea.createdAt}</span>
-        <Icon icon='material-symbols:avg-time-rounded' width='25' />
+        <Icon icon="material-symbols:avg-time-rounded" width="25" />
       </div>
-      <div className='acciones'>
-        <button onClick={handleCompletar}>Marcar Completado</button>
+      <div className="acciones">
+        {tarea.completado ? (
+          <button onClick={handleCompletar}>Desmarcar Completado</button>
+        ) : (
+          <button onClick={handleCompletar}>Marcar Completado</button>
+        )}  
         <button>Editar</button>
-        <button onClick={handleEliminar}>Eliminar</button> 
+        <button onClick={handleEliminar}>Eliminar</button>
       </div>
     </div>
   );

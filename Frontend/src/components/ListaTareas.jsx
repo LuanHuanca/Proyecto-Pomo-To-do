@@ -7,7 +7,7 @@ import ObtenerCompletos from '../tarea/ObtenerCompletos';
 
 const ListaTareas = () => {
   const [loading, setLoading] = useState(true);
-  const tareas = ObtenerCompletos();
+  const tareas = useObtenerTareas();
 
   useEffect(() => {
     const timer = setTimeout(() => {
