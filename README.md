@@ -16,10 +16,11 @@ La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usua
 - **Historial de Tareas:** Se mantiene un registro histórico de las tareas completadas para referencia futura y análisis de rendimiento.
 
 ##Tecnologás Utilizadas
--**HTML** 
--**CSS**
--**JAVA SCRIPT** 
--**REACT JS**
--**VITE** 
--**NODE JS** 
--**MYSQL**
+
+- **HTML** 
+- **CSS**
+- **JAVA SCRIPT** 
+- **REACT JS**
+- **VITE** 
+- **NODE JS** 
+- **MYSQL**
