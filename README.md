@@ -26,7 +26,7 @@ La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usua
 - **MYSQL**
 
 ## Personas desarrolladoras del Proyecto
-- **NYC KEVIN CALLIZAYA PEREZ*
-- **ANA CAROLINA ZEBALLOS GIRONDA*
-- **LUIS ANGEL HUANCA MAMANI*
-- **ANDY ABDUL CALLE CONTRERAS*
+- *NYC KEVIN CALLIZAYA PEREZ*
+- *ANA CAROLINA ZEBALLOS GIRONDA*
+- *LUIS ANGEL HUANCA MAMANI*
+- *ANDY ABDUL CALLE CONTRERAS*
