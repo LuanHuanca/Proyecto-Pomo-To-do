@@ -3,22 +3,19 @@ import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 
 function App() {
-
-
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomeScreen/>} />
+        <Route path="/" element={<HomeScreen />} />
       </Routes>
     </div>
   );
 }
 
-function Root() {
+export default function Root() {
   return (
     <BrowserRouter>
       <App />
     </BrowserRouter>
   );
 }
-export default Root;
