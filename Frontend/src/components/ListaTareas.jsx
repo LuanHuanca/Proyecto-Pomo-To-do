@@ -5,9 +5,9 @@ import TarjetaTareas from './TarjetaTareas';
 import useObtenerTareas from '../tarea/ObtenerTareas';
 import ObtenerCompletos from '../tarea/ObtenerCompletos';
 
-const ListaTareas = () => {
+const ListaTareas = ({funcion,titulo}) => {
   const [loading, setLoading] = useState(true);
-  const tareas = useObtenerTareas();
+  const tareas = funcion;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +20,7 @@ const ListaTareas = () => {
 
   return (
     <div>
-      <h2>Listado de tareas</h2>
+      <h2>Listado de {titulo}</h2>
       {loading ? (
         <Loading /> 
       ) : (

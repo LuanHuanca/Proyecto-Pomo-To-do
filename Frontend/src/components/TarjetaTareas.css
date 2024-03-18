@@ -1,5 +1,11 @@
-.tarjeta-container{
-    background-color: rgb(149, 201, 235);
+.tarjeta-container-completo{
+    background-color: rgb(130, 249, 119);
+    border: 1px solid black;
+    margin: 10px 0px;
+    border-radius: 20px;
+}
+.tarjeta-container-incompleto{
+    background-color: #95c9eb;
     border: 1px solid black;
     margin: 10px 0px;
     border-radius: 20px;
@@ -14,7 +20,6 @@
 }
 .parte-superior span{
     border: 1px solid black;
-    background-color: red;
     border-radius: 15px;
     padding: 0px 7px ;
     margin-left: 20px;

@@ -1,52 +1,23 @@
-import React, { useEffect, useState } from "react";
-import Titulo from "../components/Titulo";
-import Especificacion from "../components/Especificacion";
+import React, { useState } from "react";
+import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
 import "./HomeScreen.css";
-import AnadirTarea from "../components/AnadirTarea";
-import ListaTareas from "../components/ListaTareas";
-import Modal from "../components/Modal";
-import { createPortal } from "react-dom";
-import NTareas from "../tarea/NTareas";
-import NTareasCompletas from "../tarea/NTareasCompletas";
+import Content from "./Content";
 
 const HomeScreen = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [refresh, setRefresh] = useState(false); // Nuevo estado para forzar la actualización
-  const Tareas_Incompletas = NTareas();
-  const Tareas_Completas = NTareasCompletas();
-  const handleButtonClick = (value) => {
-    setModalOpen(false);
-    setRefresh(true); // Activar la actualización de la lista de tareas
+  const [selectedButton, setSelectedButton] = useState(""); // Estado para almacenar el botón seleccionado
+
+  // Función para manejar el clic en un botón y actualizar el estado
+  const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName); // Actualiza el estado con el nombre del botón seleccionado
   };
-  useEffect(() => {
-    if (refresh) {
-      setRefresh(false); // Desactivar la actualización después de ejecutarla
-    }
-  }, [refresh]);
   return (
-    <div className="content">
-      <Titulo fecha={"Hoy"} />
-      <div className="tabla">
-        <Especificacion number={0} descripcion={"Tiempo estimado"} />
-        <Especificacion number={Tareas_Incompletas} descripcion={"Tareas a completar"} />
-        <Especificacion number={0} descripcion={"Tiempo transcurrido"} />
-        <Especificacion number={Tareas_Completas} descripcion={"Tareas completadas"} />
+    <div>
+      <NavBar />
+      <div className="Contenido">
+        <SideBar handleButtonClick={handleButtonClick}/>
+        <Content selectedButton={selectedButton}/>
       </div>
-      <button className="btn btn-open" onClick={() => setModalOpen(true)}>
-        Añadir Tarea
-      </button>
-      {modalOpen &&
-        createPortal(
-          <Modal closeModal={handleButtonClick} titulo={"Registrar tarea"}>
-            <AnadirTarea
-              onCancel={handleButtonClick}
-              refreshList={() => setRefresh(true)}
-            />
-          </Modal>,
-          document.body
-        )}
-      <ListaTareas key={refresh.toString()} />{" "}
-      {/* Añadir 'key' para forzar la actualización */}
     </div>
   );
 };

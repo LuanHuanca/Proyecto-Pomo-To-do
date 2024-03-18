@@ -6,9 +6,6 @@ const Titulo = ({fecha}) => {
   return (
     <div className="Title">
       <h2>{fecha}</h2>
-      <button>
-        <Icon icon="bi:filter" color="black" width="25"/>
-      </button>
     </div>
   );
 };

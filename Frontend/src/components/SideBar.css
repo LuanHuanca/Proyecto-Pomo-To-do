@@ -1,0 +1,7 @@
+.SideBar-content{
+    padding: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 233, 221);
+}
