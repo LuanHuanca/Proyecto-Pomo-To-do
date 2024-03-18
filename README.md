@@ -15,6 +15,10 @@ La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usua
 - **Tiempo Dedicado:** Los usuarios pueden registrar el tiempo dedicado a cada tarea para realizar un seguimiento de su productividad y gestionar mejor su tiempo.
 - **Historial de Tareas:** Se mantiene un registro histórico de las tareas completadas para referencia futura y análisis de rendimiento.
 
+## Estado del Proyecto
+
+**Proyecto Finalizado**
+
 ## Tecnologás Utilizadas
 
 - **HTML** 
