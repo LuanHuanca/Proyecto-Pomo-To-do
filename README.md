@@ -1,5 +1,5 @@
 ### **GESTOR DE TAREAS**
-
+[![Whats-App-Image-2024-03-18-at-1-33-51-PM.jpg](https://i.postimg.cc/Wz0w5xys/Whats-App-Image-2024-03-18-at-1-33-51-PM.jpg)](https://postimg.cc/xNTmCpYZ)
 ## Descripcion
 La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usuarios una plataforma eficiente para organizar las tareas diarias, priorizando actividades y manteniendo un seguimiento, así el usuario podrá mejorar su productividad, facilitando su concentración, optimizando sus tiempos.
 
