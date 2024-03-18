@@ -1,21 +1,28 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import HomeScreen from "./screens/HomeScreen";
+// App.jsx
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
+import NavBar from '/src/components/NavBar';
+import Aside from '/src/components/Aside';
+import Content from '/src/components/Content';
+// import Footer from '/src/components/Footer'; // Importa el componente Footer
 
 function App() {
+
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
+        <Route path="/" element={<HomeScreen/>} />
       </Routes>
     </div>
   );
 }
 
-export default function Root() {
+function Root() {
   return (
     <BrowserRouter>
       <App />
     </BrowserRouter>
   );
 }
+export default Root;
