@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading'; // Importa el componente Loading
 import SinTareas from './SinTareas';
+import TarjetaTareas from './TarjetaTareas';
+import useObtenerTareas from '../tarea/ObtenerTareas';
+import ObtenerCompletos from '../tarea/ObtenerCompletos';
 
 const ListaTareas = () => {
   const [loading, setLoading] = useState(true);
-  const [tareas, setTareas] = useState([]);
+  const tareas = ObtenerCompletos();
 
   useEffect(() => {
-    // Simulando una llamada a la base de datos
-    setTimeout(() => {
-      const tareasMock = []; // Simulación de datos de la base de datos
-      setTareas(tareasMock);
-      setLoading(false);
-    }, 10000); // Simulamos una demora de 2 segundos
+    const timer = setTimeout(() => {
+      setLoading(false); // Desactiva el loading después de 2 segundos
+    }, 3500); // Simulamos una demora de 2 segundos
+
+    return () => clearTimeout(timer); // Limpia el temporizador al desmontar el componente
   }, []);
+
 
   return (
     <div>
+      <h2>Listado de tareas</h2>
       {loading ? (
-        <Loading /> // Muestra el componente Loading mientras se carga
-      ) : tareas.length > 0 ? (
-        <ul>
-          {tareas.map((tarea, index) => (
-            <li key={index}>{tarea}</li>
-          ))}
-        </ul>
+        <Loading /> 
       ) : (
-        <SinTareas/>
+        <div>
+          {tareas.length > 0 ? (
+                <div>
+                    {tareas.map((tarea) => (
+                        <TarjetaTareas tarea={tarea} key={tarea.id}/>
+                    ))}
+                </div>
+            ) : (
+                <SinTareas/>
+            )}
+        </div>
       )}
     </div>
   );
