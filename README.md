@@ -1,4 +1,4 @@
-## GESTOR DE TAREAS
+### **GESTOR DE TAREAS**
 
 ## DESCRIPCION DEL PROYECTO
 La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usuarios una plataforma eficiente para organizar las tareas diarias, priorizando actividades y manteniendo un seguimiento, así el usuario podrá mejorar su productividad, facilitando su concentración, optimizando sus tiempos.
@@ -16,4 +16,4 @@ La página web  Pomo To-Do tiene como objetivo principal proporcionar a los usua
 - **Historial de Tareas:** Se mantiene un registro histórico de las tareas completadas para referencia futura y análisis de rendimiento.
 
 ##Tecnologás Utilizadas
-- 
+-** 
