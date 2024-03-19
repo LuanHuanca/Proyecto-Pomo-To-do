@@ -30,10 +30,10 @@ const DistribucionTabla = ({ titulo, funcion }) => {
     case "Completado":
       distribucion = (
         <div className="tabla">
-          <Especificacion
+          {/* <Especificacion
             number={"horas"}
             descripcion={"Tiempo transcurrido"}
-          />
+          /> */}
           <Especificacion
             number={Tareas_Completas}
             descripcion={"Tareas completadas"}
@@ -52,10 +52,10 @@ const DistribucionTabla = ({ titulo, funcion }) => {
             number={Tareas_Incompletas}
             descripcion={"Tareas a completar"}
           />
-          <Especificacion
+          {/* <Especificacion
             number={"horas"}
             descripcion={"Tiempo transcurrido"}
-          />
+          /> */}
           <Especificacion
             number={Tareas_Completas}
             descripcion={"Tareas completadas"}
@@ -74,10 +74,10 @@ const DistribucionTabla = ({ titulo, funcion }) => {
             number={Tareas_Incompletas}
             descripcion={"Tareas a completar"}
           />
-          <Especificacion
+          {/* <Especificacion
             number={"horas"}
             descripcion={"Tiempo transcurrido"}
-          />
+          /> */}
           <Especificacion
             number={Tareas_Completas}
             descripcion={"Tareas completadas"}
@@ -96,10 +96,10 @@ const DistribucionTabla = ({ titulo, funcion }) => {
             number={Tareas_Incompletas}
             descripcion={"Tareas a completar"}
           />
-          <Especificacion
+          {/* <Especificacion
             number={"horas"}
             descripcion={"Tiempo transcurrido"}
-          />
+          /> */}
           <Especificacion
             number={Tareas_Completas}
             descripcion={"Tareas completadas"}
@@ -118,10 +118,10 @@ const DistribucionTabla = ({ titulo, funcion }) => {
             number={Tareas_Incompletas}
             descripcion={"Tareas a completar"}
           />
-          <Especificacion
+          {/* <Especificacion
             number={"horas"}
             descripcion={"Tiempo transcurrido"}
-          />
+          /> */}
           <Especificacion
             number={Tareas_Completas}
             descripcion={"Tareas completadas"}

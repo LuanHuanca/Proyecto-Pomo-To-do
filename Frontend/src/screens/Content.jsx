@@ -6,6 +6,7 @@ import ObtenerTodos from "../tarea/ObtenerTodos";
 import ObtenerPrioridadBaja from "../tarea/ObtenerPrioridadBaja";
 import ObtenerPrioridadMedia from "../tarea/ObtenerPrioridadMedia";
 import ObtenerPrioridadAlta from "../tarea/ObtenerPrioridadAlta";
+import './Content.css'
 
 const Content = ({ selectedButton }) => {
   let content = null;
@@ -37,8 +38,8 @@ const Content = ({ selectedButton }) => {
       break;
     default:
       content = <div className="default-content">
-        <img src="/src/image/welcome.jpg" alt="Bienvenido a nuestro gestor de tareas" />
         <h2>BIENVENIDO A NUESTRO GESTOR DE TAREAS</h2>
+        <img src="/src/image/logo_pomotodo.jpeg" alt="Bienvenido a nuestro gestor de tareas" />
       </div>;
       break;
   }

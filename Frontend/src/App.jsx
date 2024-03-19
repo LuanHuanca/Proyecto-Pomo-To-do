@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
+import Timer from "./Temporizador/Timer";
+import Temporizador from "./Temporizador/Temporizador";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
+        <Route path="/" element={<HomeScreen/>} />
       </Routes>
     </div>
   );

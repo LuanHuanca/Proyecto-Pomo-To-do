@@ -1,33 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import "./AnadirTarea.css";
+import "./EditarTarea.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const URL = "http://localhost:3000/tareas/";
 
-const AnadirTarea = ({ onCancel }) => {
+const EditarTarea = ({ onCancel,id}) => {
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [tiempo, setTiempo] = useState(0);
   const [prioridad, setPrioridad] = useState("");
   const [error, setError] = useState("");
 
-  const navigate = useNavigate();
-
-  // Procedimiento para guardar tareas
-  const guardar = async (e) => {
+  // Procedimiento para editar tareas
+  const update = async (e) => {
     e.preventDefault();
-    if (!titulo || !descripcion || !tiempo || !prioridad) {
-      setError("Por favor completa todos los campos.");
-      return;
-    }
-    if (tiempo < 0) {
-      setError("El tiempo no puede ser negativo.");
-      return;
-    }
     try {
-      await axios.post(URL, {
+      await axios.put(URL+id, {
         titulo: titulo,
         descripcion: descripcion,
         tiempo: tiempo,
@@ -36,12 +26,24 @@ const AnadirTarea = ({ onCancel }) => {
       window.location.reload(false);
       onCancel();
     } catch (error) {
-      setError("Error al guardar la tarea. Inténtalo de nuevo más tarde.");
+      setError("Error al actualizar la tarea. Inténtalo de nuevo más tarde.");
     }
   };
 
+  useEffect(()=>{
+    getTareaById()
+  },[])
+
+  const getTareaById = async ()=>{
+    const res = await axios.get(URL+id)
+    setTitulo(res.data.titulo)
+    setDescripcion(res.data.descripcion)
+    setTiempo(res.data.tiempo)
+  }
+  
+
   return (
-    <form onSubmit={guardar}>
+    <form onSubmit={update}>
       <div className="cuadro_anadir_tarea">
         <span>Ingrese los datos de la tarea</span>
         <h3>Titulo de la tarea</h3>
@@ -84,7 +86,7 @@ const AnadirTarea = ({ onCancel }) => {
       </div>
       <div className="modal-footer">
         <button type="submit" className="btn btn-submit">
-          Submit
+          Update
         </button>
         <button className="btn btn-cancel" onClick={onCancel}>
           Cancel
@@ -94,4 +96,4 @@ const AnadirTarea = ({ onCancel }) => {
   );
 };
 
-export default AnadirTarea;
+export default EditarTarea;
